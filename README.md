@@ -14,7 +14,7 @@ licheenano_480_ubuntu140432_v3_g++_ipc.tar.gz
 qt4nano_v3.tar.gz  
 opt_qt_lib_fonts.zip  
 
-* linux 5 with buildroot
+* linux 5 with buildroot  
 buildroot-tiny200-master_nano_v1.tar.gz  
 sysimage-nor_480_272_aodzip_nano.img  
 
