@@ -38,7 +38,9 @@ qt4-nes2_v1_success_ubuntu14_qt4_qws.tar.gz
 
 * lvgl  
 work_gamepi_v3.7z  
-lv_port_linux_frame_buffer_gamepi20_v1.tar.gz   
+lv_port_linux_frame_buffer_gamepi20_v1.tar.gz
+
+* https://github.com/darrenliew96/gamepi20_drivers  
 
 ## 榴莲派 (compatible with LicheePi Nano) , f1c100s, 480x272    
 * lvgl with buildroot  
