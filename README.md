@@ -12,7 +12,12 @@ SDL-1.2.15_makefile_xiaozhi_v1.tar.gz
 fvjpeg6b_v4_xiaozhi.tar.gz  
 
 * lvgl
-lv_port_linux_frame_buffer_xiaozhi_v1.tar.gz  
+lv_port_linux_frame_buffer_xiaozhi_v1.tar.gz
+
+* qt4 nes  
+qt4-nes_v5_xiaozhi.tar.gz  
+qt4-nes_v6_boot.tar.gz
+qt-everywhere-opensource-src-4.8.6_riscv64.tar.gz  
 
 ## 榴莲派 (compatible with LicheePi Nano) , f1c100s, 480x272    
 * lvgl with buildroot  
@@ -37,3 +42,8 @@ sunxi-fel.exe -p spiflash-write 0 xxx.bin
 ## 小淘气开发板(xiaotaoqi), f1c200s, 800x480  
 * licheenano_800_ubuntu140432_v4_g++_ipc.tar.gz  
 flashimg_ubuntu140432_g++_ipc_nano_800_480_linux_4.15.0-rc8_uclibc.bin  
+
+## LVGL Android  
+* lvgldemo_v2_lvgl_android_draw_success.7z
+
+* VideoProject_v2_play_audio_success(1).7z  
