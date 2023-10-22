@@ -1,7 +1,18 @@
 # wmt_game_handheld_study
 My game handheld study
 
-## 
+## Gaviar-Handheld, 小志掌機, 小志掌机 (xiaozhi), Allwinner D1s    
+* https://bbs.aw-ol.com/topic/3751/全开源-小志掌機gaviar-handheld-资料汇总/9  
+
+* graywin, SDL1
+SDL-1.2.15_makefile_build.tar.gz
+SDL-1.2.15_makefile_xiaozhi_v1.tar.gz  
+
+* fv, for replacing fbv witch not work    
+fvjpeg6b_v4_xiaozhi.tar.gz  
+
+* lvgl
+lv_port_linux_frame_buffer_xiaozhi_v1.tar.gz  
 
 ## 榴莲派 (compatible with LicheePi Nano) , f1c100s, 480x272    
 * lvgl with buildroot  
