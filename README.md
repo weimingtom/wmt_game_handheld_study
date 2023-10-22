@@ -20,19 +20,22 @@ qt4-nes_v6_boot.tar.gz
 qt-everywhere-opensource-src-4.8.6_riscv64.tar.gz  
 
 ## GamePi20, rpi zero    
-* qt4 nes
-https://github.com/nejidev/arm-NES-linux
+* run rom  
+2018-04-18-raspbian-stretch-lite.zip    
 
-* fvjpeg6b_v4_xiaozhi.tar.gz
+* qt4 nes  
+https://github.com/nejidev/arm-NES-linux  
 
-* qt4 nes
-qt4-NES4_5_512_480_640_480_try_high_speed.7z  
+* fvjpeg6b_v4_xiaozhi.tar.gz  
+
+* qt4 nes  
+qt4-NES4_5_512_480_640_480_try_high_speed.7z   
 qt4-nes_rp0.tar.gz  
 qt4-nes2_v1_success_ubuntu14_qt4_qws.tar.gz  
 
-* lvgl
-work_gamepi_v3.7z
-lv_port_linux_frame_buffer_gamepi20_v1.tar.gz  
+* lvgl  
+work_gamepi_v3.7z  
+lv_port_linux_frame_buffer_gamepi20_v1.tar.gz   
 
 ## 榴莲派 (compatible with LicheePi Nano) , f1c100s, 480x272    
 * lvgl with buildroot  
