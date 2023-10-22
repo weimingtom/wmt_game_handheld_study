@@ -3,10 +3,13 @@ My game handheld study
 
 ## Gaviar-Handheld, 小志掌機, 小志掌机 (xiaozhi), Allwinner D1s    
 * https://bbs.aw-ol.com/topic/3751/全开源-小志掌機gaviar-handheld-资料汇总/9  
+run rom :
+tina_d1s-gaviarhandhelda_uart4.img  
+xiaozhi_256m.7z  
 
-* graywin, SDL1
-SDL-1.2.15_makefile_build.tar.gz
-SDL-1.2.15_makefile_xiaozhi_v1.tar.gz  
+* graywin, SDL1  
+SDL-1.2.15_makefile_build.tar.gz  
+SDL-1.2.15_makefile_xiaozhi_v1.tar.gz    
 
 * fv, for replacing fbv witch not work    
 fvjpeg6b_v4_xiaozhi.tar.gz  
