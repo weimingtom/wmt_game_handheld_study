@@ -62,6 +62,24 @@ mpi-r-tools.zip, zadig-2.5.exe, Device, Create New Device, Allwinner FEL Device,
 mpi-r-tools.zip, zadig-2.5.exe, Device, Create New Device, Allwinner DFU Device, USB ID: 1F3A 1010, Install Driver  
 sunxi-fel.exe -p spiflash-write 0 xxx.bin  
 
+## GAME BOX POWER M3, Sup M3, SupM3  
+* https://steward-fu.github.io/website/handheld.htm#q8
+* https://github.com/steward-fu/archives/releases?q=q8&expanded=true
+* https://github.com/steward-fu/archives/releases/download/q8/q8_od_jckl_no_roms.img.7z
+* m3_factory_tf_4gb.7z  
+* m3_2_factory_nor_flash.rar  
+* m3_factory_tf_8gb.7z  
+* m3_3.rar
+* 焊接3 UART和2 FEL  
+```
+我又多了一个F1C100S开发板。如图，焊接Sup M3的三线串口和2线FEL开关，和运行Q8固件的串口日志。
+其中2线FEL开关在HOME键旁边（外壳的正中间三个按键那里），短接后启动再松开进入FEL模式。
+而3线串口在LCD下方nor flash的下面，方形焊台是GND，从右到左（图LCD反转到下方，
+所以图中是从左到右）依次是GND，RX0，TX0（大概是这样，如果不对的话调转），
+对应调试器的GND，TXD，RXD。我测试过出厂固件（运行在8mb nor flash）内是没有这个串口输出的，
+但如果运行tf卡的Q8固件则有（这是第三方固件，要自己刷，出厂没有，但这个固件用不了，按键没匹配）
+```
+
 ## 小淘气开发板(xiaotaoqi), f1c200s, 800x480  
 * licheenano_800_ubuntu140432_v4_g++_ipc.tar.gz  
 flashimg_ubuntu140432_g++_ipc_nano_800_480_linux_4.15.0-rc8_uclibc.bin  
