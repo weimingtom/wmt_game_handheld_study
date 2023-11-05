@@ -79,6 +79,13 @@ sunxi-fel.exe -p spiflash-write 0 xxx.bin
 对应调试器的GND，TXD，RXD。我测试过出厂固件（运行在8mb nor flash）内是没有这个串口输出的，
 但如果运行tf卡的Q8固件则有（这是第三方固件，要自己刷，出厂没有，但这个固件用不了，按键没匹配）
 ```
+* lcd driver, cfw-2.0.0-alpha-14-gb39b67e.7z  
+https://github.com/tiopex/sdcard/releases  
+http://c.tieba.baidu.com/p/7691824426?pn=2  
+console.cfg  
+CONSOLE_VARIANT=bittboy2x  
+BOOT_M3_mod.7z\variants\bittboy2x\modules.custom.sh  
+insmod "../../r61520fb.ko" version=1 flip=1    
 
 ## 小淘气开发板(xiaotaoqi), f1c200s, 800x480  
 * licheenano_800_ubuntu140432_v4_g++_ipc.tar.gz  
