@@ -62,7 +62,7 @@ mpi-r-tools.zip, zadig-2.5.exe, Device, Create New Device, Allwinner FEL Device,
 mpi-r-tools.zip, zadig-2.5.exe, Device, Create New Device, Allwinner DFU Device, USB ID: 1F3A 1010, Install Driver  
 sunxi-fel.exe -p spiflash-write 0 xxx.bin  
 
-## GAME BOX POWER M3, Sup M3, SupM3  
+## GAME BOX POWER M3, Sup M3, SupM3, F1C100s + 8MB nor flash    
 * https://steward-fu.github.io/website/handheld.htm#q8
 * https://github.com/steward-fu/archives/releases?q=q8&expanded=true
 * https://github.com/steward-fu/archives/releases/download/q8/q8_od_jckl_no_roms.img.7z
