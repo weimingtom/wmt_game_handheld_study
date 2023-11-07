@@ -86,7 +86,9 @@ console.cfg
 CONSOLE_VARIANT=bittboy2x  
 BOOT_M3_mod.7z\variants\bittboy2x\modules.custom.sh  
 insmod "../../r61520fb.ko" version=1 flip=1
-* if use tf card with q8_od_jckl_no_roms.img.7z, it could be got a root login prompt in UART GRT pins    
+* if use tf card with q8_od_jckl_no_roms.img.7z, it could be got a root login prompt in UART GRT pins
+* q8_od_jutleys_no_roms.img.7z also works  
+see https://github.com/steward-fu/archives/releases?q=q8&expanded=true  
 
 ## 小淘气开发板(xiaotaoqi), f1c200s, 800x480  
 * licheenano_800_ubuntu140432_v4_g++_ipc.tar.gz  
