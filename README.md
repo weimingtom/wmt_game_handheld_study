@@ -42,6 +42,14 @@ lv_port_linux_frame_buffer_gamepi20_v1.tar.gz
 
 * https://github.com/darrenliew96/gamepi20_drivers  
 
+## Waveshare ESP32-One + GamePi20  
+* ips2_0_esp32_2_esp32one_gamepi20_v1_wifi_no_auto_shutdown.7z
+* ips2_0_esp32_esp32one_gamepi20_v5_wifi_no_auto_shutdown.7z
+* https://www.waveshare.net/wiki/ESP32_One
+
+## (TODO) Waveshare RP2040-PiZero  
+* https://www.waveshare.net/wiki/RP2040-PiZero  
+
 ## 榴莲派 (compatible with LicheePi Nano) , f1c100s, 480x272    
 * lvgl with buildroot  
 lv_port_linux_frame_buffer_f1c_480_br_uclibc_v1.tar.gz  
