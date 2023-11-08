@@ -42,7 +42,7 @@ lv_port_linux_frame_buffer_gamepi20_v1.tar.gz
 
 * https://github.com/darrenliew96/gamepi20_drivers  
 
-## Waveshare ESP32-One + GamePi20  
+## Waveshare ESP32-One + GamePi20, with Arduino IDE ESP32 plugin    
 * ips2_0_esp32_2_esp32one_gamepi20_v1_wifi_no_auto_shutdown.7z
 * ips2_0_esp32_esp32one_gamepi20_v5_wifi_no_auto_shutdown.7z
 * https://www.waveshare.net/wiki/ESP32_One
