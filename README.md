@@ -96,6 +96,36 @@ lvgl（基于Linux），嵌入式Qt4（基于Linux），纯event方式读，gpio
 还可能出现ADC问题
 ```
 
+* keycode  
+```
+evtest, /dev/input/event1
+/dev/input/event0:      sunxi-gpadc0
+/dev/input/event1:      gpio-keys
+Select the device event number [0-1]: 1
+1
+Input driver version is 1.0.1
+Input device ID: bus 0x19 vendor 0x1 product 0x1 version 0x100
+Input device name: "gpio-keys"
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+UP, PE0,  左上：type 1 (EV_KEY), code 114 (KEY_VOLUMEDOWN), value 1->0
+DOWN, PE7, 左下：type 1 (EV_KEY), code 115 (KEY_VOLUMEUP), value 1
+LEFT: PE6, 左左：type 1 (EV_KEY), code 116 (KEY_POWER), value 1
+RIGHT: PE4, 左右：type 1 (EV_KEY), code 117 (KEY_KPEQUAL), value 1
+X, PE11, 右上：type 1 (EV_KEY), code 120 (KEY_SCALE), value 1
+B, PE12, 右下：type 1 (EV_KEY), code 119 (KEY_PAUSE), value 1
+Y, PE2, 右左：type 1 (EV_KEY), code 118 (KEY_KPPLUSMINUS), value 1
+A, PE13, 右右：type 1 (EV_KEY), code 121 (KEY_KPCOMMA), value 1
+SELECT, PE8, 左1：type 1 (EV_KEY), code 122 (KEY_HANGUEL), value 1
+START, PE9, 左2：type 1 (EV_KEY), code 123 (KEY_HANJA), value 1
+MENU, PE3, 右1：type 1 (EV_KEY), code 124 (KEY_YEN), value 1
+L, PE1，未焊接: Event code 125 (KEY_LEFTMETA)
+R, PE10，未焊接: Event code 126 (KEY_RIGHTMETA)
+
+https://bbs.aw-ol.com/topic/3751/全开源-小志掌機gaviar-handheld-资料汇总/9
+https://bbs.aw-ol.com/topic/3650/gaviar-handheld-小志掌機/22?page=1
+```
 
 ## GamePi20, rpi zero    
 * run rom  
