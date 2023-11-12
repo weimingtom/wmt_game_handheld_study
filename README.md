@@ -113,3 +113,5 @@ flashimg_ubuntu140432_g++_ipc_nano_800_480_linux_4.15.0-rc8_uclibc.bin
 ## (TODO) WiringPi  
 * WiringPi_WiringPi-master.zip  
 * showbmp_luckfox_v1.tar.gz  
+
+## (TODO) retro-go, retro-go-stm32, retro yao-mio  
