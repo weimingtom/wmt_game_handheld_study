@@ -22,6 +22,81 @@ qt4-nes_v5_xiaozhi.tar.gz
 qt4-nes_v6_boot.tar.gz
 qt-everywhere-opensource-src-4.8.6_riscv64.tar.gz  
 
+* LEDC
+```
+小志掌机研究，今天来看看怎么控制左上角的彩灯，简单说就是把0到255之间的数输出到
+/sys/class/leds/sunxi_led0r/brightness
+（可能是sunxi_led0r，sunxi_led0g和sunxi_led0b三种颜色，0表示关闭）。
+我是怎么知道的呢，其实看dts设备树源码，知道PE5是控制WS2812C-2020-V1彩灯，
+驱动是LEDC，然后在文档《D1s
+开发板使用简介》中查到LEDC的用法。由于树莓派没有这种玩法，
+所以gamepi20忽略研究这个彩灯
+```
+
+* st7789v i8080 tft
+```
+关于小志掌机i8080 16模式屏幕的反色问题，很简单，找一段反色代码（搜索ST7735_INVON或者ST7789_INVON）
+加入进去即可，例如这样（不需要输出DATA数据线，用delay代替）：
+//ST7789_COLMOD=03a, ST7735_INVON=0x21 
+LCD_WR_REG(0x21);
+delay_ms(100); //Delay 120ms
+然后颜色就正常了（st7789会帮忙自动反色），具体效果晚上给出
+```
+
+* UART
+```
+小志掌机研究。可以确定，如果不改设备树的话，提供的固件接usb键盘和鼠标是看不到动态event设备的，除非改设备树。
+另外我焊接上了串口，串口从左到右丝印的TRG实际上是RTG，或者理解成接调试器的TRG，最左的方形焊盘不是地线。
+我犯了个错误，我把调试器的地线接到开发板串口的R，结果串口居然也可以正常输出内容，但输入会无反应，
+如果发现串口输入没反应，则有可能地线接错了，不一定是T线接错
+```
+
+* input, evtest, getevent
+```
+小志掌机研究。我测试过树莓派zero+GamePi20，可以成功编译和运行getevent（tina版，-lt参数）
+和evtest（buildroot版），完全没问题，
+只不过不能获取GamePi20的按键输入事件，因为设备树没有（但sysfs可能可以）。如此我想起其实存在第三个问题，
+我可以用usb设备去取代手柄按键，但usb设备存在第三个问题，它是动态分配/dev/input/eventN的，
+除非我可以在LVGL和Qt4中动态判断出哪个event设备从而获取键盘或者鼠标输入，
+这方面LVGL可能做得不太好（都是固定的），Qt4也差不多。
+
+总体来说关于小志掌机和GamePi20的输入功能，现在有三个问题待解决：
+（1）如何简化getevent和evtest的按键鼠标输入代码且嵌入到模拟器代码中
+（2）如何通过按键模拟轨迹球鼠标
+（3）如何动态适配usb设备文件，从而自动适配usb鼠标和usb键盘
+（树莓派zero应该可以，但小志掌机仍不确定是否可以接入usb鼠标键盘）
+
+小志掌机研究。我用自带的evtest测试，对应snes手柄按键如下获得的键码和实体按钮对应关系如下。
+你会发现设备树的标签名写错了，但我看过跟针脚名的对应是没错的，
+我倾向于用snes的键名（即橙色列那个表），
+我只要写一个程序读取/dev/input/event1的键码即可知道对应的键名（根据图一） ​​​
+
+小志掌机研究。为什么要研究getevent和evtest呢？因为跟tft lcd输出类似，按键输入也可以分两种，
+一种是通过gpio做（例如sysfs或者mmap），另一种是通过驱动实现，把gpio操作放在内核态。
+用哪一种取决于设备树，但一旦设备树占用了，就有可能无法用gpio做按键输入了。
+目前的情况是，小志掌机固件我没实际编译过（树莓派zero也是），
+所以小志掌机固件的设备树（gpio-keys）限制了一定要类似于getevent或者evtest的做法，
+通过设备驱动读取，而树莓派zero则没有这个限制，应该可以用gpio（例如wiringpi方式读入）。
+我打算下一步研究怎么简化evtest的代码，看能否得到一个最小读取按键代码；
+而对树莓派zero也做类似的工作
+
+我比较一下小志掌机源码包的evtest和getevent，结论如下。
+一、evtest和getevent的区别：
+（1）evtest是buildroot的一个包，可能来源于gitlab或者gh。buildroot的补丁似乎可以忽略，
+改动不大。evtest也是apt的一个包，可以通过apt安装到树莓派上
+（2）getevent是tina的一个包（utils下，tina是来源于openwrt），来源于android的测试工具箱。
+在source.android文档中有介绍。gh上也有人把它移植到ubuntu下。
+二、两者的联系：代码量似乎相当都是1300多行，getevent分出头文件，evtest是单个c文件。
+所以我怀疑本质上可能是相同的，都是根据几组标签常量数组来输出事件标签
+
+小志掌机研究，我准备研究按键输入，目前有这几种可能的办法读取按键输入：
+getevent（支持linux和android），evtest（支持linux），SDL（基于Linux），
+lvgl（基于Linux），嵌入式Qt4（基于Linux），纯event方式读，gpio按键。
+之所以这么麻烦是因为按键输入不一定只有高低电平，可能还需要模拟鼠标或触摸，
+还可能出现ADC问题
+```
+
+
 ## GamePi20, rpi zero    
 * run rom  
 2018-04-18-raspbian-stretch-lite.zip    
