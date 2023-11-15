@@ -145,7 +145,9 @@ qt4-nes2_v1_success_ubuntu14_qt4_qws.tar.gz
 work_gamepi_v3.7z  
 lv_port_linux_frame_buffer_gamepi20_v1.tar.gz
 
-* https://github.com/darrenliew96/gamepi20_drivers  
+* https://github.com/darrenliew96/gamepi20_drivers
+
+* https://github.com/rm-hull/st7735fb  
 
 ## Waveshare ESP32-One + GamePi20, with Arduino IDE ESP32 plugin    
 * ips2_0_esp32_2_esp32one_gamepi20_v1_wifi_no_auto_shutdown.7z
