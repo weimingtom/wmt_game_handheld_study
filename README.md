@@ -128,6 +128,15 @@ https://bbs.aw-ol.com/topic/3650/gaviar-handheld-小志掌機/22?page=1
 ```
 
 * work_getevent_v2.7z  
+```
+小志掌机研究。我尝试在树莓派4b上（方便编译运行）简化evtest代码，
+得到大概只有120行左右的代码，如图，
+核心部分是一个循环加select（经典select/poll模型），你可能好奇，
+我如果要非阻塞或者同时读两个以上的设备输入怎么办？SDL和Android NDK
+的做法是合并到同一个事件队列，写法很类似select/poll，
+但可以做到非阻塞的轮询
+```
+
 
 ## GamePi20, rpi zero    
 * run rom  
