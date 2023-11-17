@@ -127,7 +127,7 @@ https://bbs.aw-ol.com/topic/3751/全开源-小志掌機gaviar-handheld-资料汇
 https://bbs.aw-ol.com/topic/3650/gaviar-handheld-小志掌機/22?page=1
 ```
 
-* work_getevent_v2.7z  
+* work_getevent_v3.7z, work_getevent_v2.7z  
 ```
 小志掌机研究。我尝试在树莓派4b上（方便编译运行）简化evtest代码，
 得到大概只有120行左右的代码，如图，
