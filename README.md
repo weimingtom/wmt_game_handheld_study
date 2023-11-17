@@ -127,6 +127,8 @@ https://bbs.aw-ol.com/topic/3751/全开源-小志掌機gaviar-handheld-资料汇
 https://bbs.aw-ol.com/topic/3650/gaviar-handheld-小志掌機/22?page=1
 ```
 
+* work_getevent_v2.7z  
+
 ## GamePi20, rpi zero    
 * run rom  
 2018-04-18-raspbian-stretch-lite.zip    
