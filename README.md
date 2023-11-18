@@ -135,7 +135,18 @@ https://bbs.aw-ol.com/topic/3650/gaviar-handheld-小志掌機/22?page=1
 我如果要非阻塞或者同时读两个以上的设备输入怎么办？SDL和Android NDK
 的做法是合并到同一个事件队列，写法很类似select/poll，
 但可以做到非阻塞的轮询
+
+小志掌机研究。关于按键输入方法，除了evtest的源码中select函数（通过循环+select+read读取gpio-key或者sysfs设备），
+还可以通过poll函数，参考getevent的源码（见tina的一个包或者在gh找，源自Android源码），
+以及mFlying/ssd2xx-demo和OpenNuvoton/N32926_Linux_Applications的GPIO示例。
+ssd2xx-demo称之为中断方式读取输入
 ```
+https://gitee.com/mFlying/ssd2xx-demo/blob/master/7.gpio/gpio_test_input/main.c  
+http://doc.industio.com/docs/ido-som2d0x-start/ido-som2d0x-start-1ctpju1ek2b27  
+https://github.com/OpenNuvoton/NUC970_Linux_Applications/blob/master/demos/gpio/gpio_demo.c  
+https://github.com/OpenNuvoton/NUC980_Linux_Applications/blob/master/demos/gpio/gpio_demo.c  
+https://github.com/OpenNuvoton/N32905_Linux_Applications/blob/master/gpio/gpio.c  
+https://github.com/OpenNuvoton/N32926_Linux_Applications/blob/master/gpio/gpio.c  
 
 
 ## GamePi20, rpi zero    
