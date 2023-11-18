@@ -147,7 +147,10 @@ https://github.com/OpenNuvoton/NUC970_Linux_Applications/blob/master/demos/gpio/
 https://github.com/OpenNuvoton/NUC980_Linux_Applications/blob/master/demos/gpio/gpio_demo.c  
 https://github.com/OpenNuvoton/N32905_Linux_Applications/blob/master/gpio/gpio.c  
 https://github.com/OpenNuvoton/N32926_Linux_Applications/blob/master/gpio/gpio.c  
-
+https://github.com/markyzq/getevent_ubuntu  
+https://github.com/freedesktop-unofficial-mirror/evtest  
+evtest-1.34  
+https://github.com/mangopi-sbc/tina-package/tree/main/utils/getevent  
 
 ## GamePi20, rpi zero    
 * run rom  
