@@ -248,6 +248,12 @@ flashimg_ubuntu140432_g++_ipc_nano_800_480_linux_4.15.0-rc8_uclibc.bin
 
 ## (TODO) retro-go, retro-go-stm32, retro yao-mio  
 
-## luckfox  
-* soft spi:
+## luckfox pico  
+* soft spi, arm-rockchip830-linux-uclibcgnueabihf.tar.gz, Pico_LCD_Code.7z, VirtualBox-Luckfox-Pico-Ubuntu18.zip  
 showbmp_luckfox_v5_1.44_bmp.zip  
+
+## milk-v duo  
+* soft spi, LF_Pico_LCD_Image.7z, milkv-duo-20230616-2232.img.zip, duo-sdk-v1.2.0.tar.gz, xubuntu200464  
+showbmp_milkv_v2_img.tar.gz
+showbmp_milkv_v1_basic.tar.gz
+
