@@ -152,6 +152,17 @@ https://github.com/freedesktop-unofficial-mirror/evtest
 evtest-1.34  
 https://github.com/mangopi-sbc/tina-package/tree/main/utils/getevent  
 
+* qt hide mouse and get keycode
+```
+小志掌机研究。研究按键输入问题（目前未解决），重新编译Qt4，发现几个以前搞错的地方：
+（1）以前发现编译qt时ar报错，后来发现其实是因为我没有配置好正确的objcopy（指向错误的工具链），改好就没事了
+（2）Qt4只能在ubuntu14（非32位版，64位版）下交叉编译，如果放在xubuntu20下会出现编译错误，
+卡在QPrintDialog那里，那是因为Qt4无法用较新的gcc编译
+（3）可以通过QWSServer::setCursorVisible(false)隐藏鼠标，用setOverrideCursor无效
+（4）我试过用QWS_KEYBOARD=:/dev/input/event1指定键盘，虽然可以，
+但发现获取的键码不对，我可能需要另外想办法
+```
+
 ## GamePi20, rpi zero    
 * run rom  
 2018-04-18-raspbian-stretch-lite.zip    
