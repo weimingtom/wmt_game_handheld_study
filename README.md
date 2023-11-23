@@ -152,7 +152,8 @@ https://github.com/freedesktop-unofficial-mirror/evtest
 evtest-1.34  
 https://github.com/mangopi-sbc/tina-package/tree/main/utils/getevent  
 
-* qt hide mouse and get keycode
+* qt hide mouse and get keycode  
+qt4-nes_v12_button_input_success.tar.gz  
 ```
 小志掌机研究。研究按键输入问题（目前未解决），重新编译Qt4，发现几个以前搞错的地方：
 （1）以前发现编译qt时ar报错，后来发现其实是因为我没有配置好正确的objcopy（指向错误的工具链），改好就没事了
@@ -161,6 +162,17 @@ https://github.com/mangopi-sbc/tina-package/tree/main/utils/getevent
 （3）可以通过QWSServer::setCursorVisible(false)隐藏鼠标，用setOverrideCursor无效
 （4）我试过用QWS_KEYBOARD=:/dev/input/event1指定键盘，虽然可以，
 但发现获取的键码不对，我可能需要另外想办法
+
+小志掌机研究。由于Qt4在小志掌机上的按键键码是乱的，我的想法是把evtest缩小版代码整个嵌入到用qt nes代码中，
+通过Qt线程启动，如果用Windows编译大概就是如下效果——当然只能模拟编译，效果要需要试验。
+我甚至看到有人用Qt网络库去读取linux input event设备事件，例如这篇
+《Qt之 读取 /dev/input/event*设备 并解析》，不过这篇是触摸屏输入
+
+小志掌机研究，我测试过通过嵌入evtest实现按键输入的思路是可行的，非常流畅地获得按键反馈，
+可以开始选择左右移动跳跃和发射。相关的代码我会找机会上传到gh上，
+也可能等最后一块功能音频输出研究好再做，我没有把握一定能解决Qt的音频输出，
+如果实在搞不定就跳过，另外GamePi20的按键输入也需要研究，
+那个相对会比较简单，因为WiringPi支持中断方式的按键输入函数ISR
 ```
 
 ## GamePi20, rpi zero    
