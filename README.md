@@ -197,7 +197,9 @@ lv_port_linux_frame_buffer_gamepi20_v1.tar.gz
 
 * https://github.com/rm-hull/st7735fb
 
-* https://github.com/waveshare/mk_arcade_joystick_rpi  
+* https://github.com/waveshare/mk_arcade_joystick_rpi
+
+* https://github.com/waveshare/GamePi15  
 
 ## Waveshare ESP32-One + GamePi20, with Arduino IDE ESP32 plugin    
 * ips2_0_esp32_2_esp32one_gamepi20_v1_wifi_no_auto_shutdown.7z
