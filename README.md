@@ -4,6 +4,26 @@ My game handheld study
 ## TODO  
 ```
 
+showbmp_luckfox_v5_1.44_bmp.zip
+
+芒果派mqpro
+search mangopi-sbc_Tina-Linux-main.zip
+
+https://github.com/pangweiwei/slua
+
+
+
+esp32one+gamepi20
+ips2_0_esp32_2_esp32one_gamepi20_v1_wifi_no_auto_shutdown.7z
+ips2_0_esp32_esp32one_gamepi20_v5_wifi_no_auto_shutdown.7z
+
+
+freej2me
+https://ashiningray.github.io/freej2me/
+https://github.com/MiyooMini
+https://github.com/TriForceX/MiyooCFW/wiki/穿越操作系统迷雾
+
+
 atj2273s
 
 M3掌机
