@@ -3,6 +3,25 @@ My game handheld study
 
 ## TODO  
 ```
+
+atj2273s
+
+M3掌机
+
+小志掌机屏幕并口
+lcd_28_16_v1.7z
+用中景园STM32F103RCT6开发板（可能已经停产了）驱动小志掌机30针并口屏，大致成功了，效果如下，线多。并口在文档中称为I8080 16bit（或者叫MCU 8080），通过3个脚的电平区分模式（并口16，并口8或者4SPI）。注意16深的数据线不能接错，例如一个叫PB2，应该接在BOOT1上，如果接在PD2上就出问题，另外颜色有问题，可能高低位反转了，中景园提供的驱动代码可能不完全兼容这个屏。待考
+lcd_28_16_v2_success_invon.7z
+
+
+https://www.cnblogs.com/liangliangge/p/12626248.html
+getevent -lp
+getevent -lt
+sendevent
+https://bbs.16rd.com/thread-581476-1-1.html
+https://d1.docs.aw-ol.com/strong/strong_1display/
+
+
 rp2040_pizero_v1_LCDTestV2_success_gamepi20.7z
 rp2040_pizero_v2_dino.7z
 
