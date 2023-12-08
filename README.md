@@ -3,6 +3,13 @@ My game handheld study
 
 ## TODO  
 ```
+rp2040_pizero_v1_LCDTestV2_success_gamepi20.7z
+rp2040_pizero_v2_dino.7z
+
+小志掌机
+work_getevent_v2.7z
+
+
 小志掌机的qt和lvgl代码未上传网盘
 *
 https://bbs.aw-ol.com/topic/3751/全开源-小志掌機gaviar-handheld-资料汇总/9
