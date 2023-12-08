@@ -1,6 +1,89 @@
 # wmt_game_handheld_study
 My game handheld study
 
+## TODO  
+```
+小志掌机的qt和lvgl代码未上传网盘
+*
+https://bbs.aw-ol.com/topic/3751/全开源-小志掌機gaviar-handheld-资料汇总/9
+run rom : tina_d1s-gaviarhandhelda_uart4.img
+xiaozhi_256m.7z
+*
+graywin, SDL1
+SDL-1.2.15_makefile_build.tar.gz
+SDL-1.2.15_makefile_xiaozhi_v1.tar.gz
+*
+fv, for replacing fbv witch not work
+fvjpeg6b_v4_xiaozhi.tar.gz
+* lvgl lv_port_linux_frame_buffer_xiaozhi_v1.tar.gz
+*
+qt4 nes
+qt4-nes_v5_xiaozhi.tar.gz
+qt4-nes_v6_boot.tar.gz qt-everywhere-opensource-src-4.8.6_riscv64.tar.gz
+
+
+用stm32驱动小志掌机并口屏的接线方法，见
+lcd_28_16_v2_success_invon.7z
+https://bbs.aw-ol.com/topic/3751/全开源-小志掌機gaviar-handheld-资料汇总
+（转接板是31-x）排线次序<->功能<->stm32
+1<->GND,2<->3.3V
+3<->RST<->PA4,4<->CS<->PA0
+5<->RS<->PA1,6<->WR<->PA2
+7<->RD<->PA3,8<->NC
+9<->D3B<->PB0,10<->D4B<->PB1
+11<->D5B<->PB2（BOOT1）,12<->D6B<->PB3
+13<->D7B<->PB4,14<->D10G<->PB5
+15<->D11G<->PB6,16<->D12G<->PB7
+17<->D14G<->PB8,18<->D15G<->PB9
+19<->D18G<->PB10,20<->D19R<->PB11
+21<->D20R<->PB12,22<->D21R<->PB13
+23<->D22R<->PB14,24<->D23R<->PB15
+25<->3.3V?,26<->GND
+27<->GND?,28<->LEDA+<->PA5
+29<->LEDK-<->GND,30<->GND
+数字跟实际是反过来，例如1实际对应转接板的30
+stm32的pb2对应开发板上的BOOT1，不是PD2
+
+de2 uclinux
+
+树莓派按键输入
+https://www.waveshare.net/study/article-602-1.html
+
+
+小志掌机，按键输入成功
+qt4-nes_v12_button_input_success.tar.gz
+qt-everywhere-opensource-src-4.8.6_xiaozhi_v2.tar.gz
+小志掌机研究。由于Qt4在小志掌机上的按键键码是乱的，我的想法是把evtest缩小版代码整个嵌入到用qt nes代码中，通过Qt线程启动，如果用Windows编译大概就是如下效果——当然只能模拟编译，效果要需要试验。我甚至看到有人用Qt网络库去读取linux input event设备事件，例如这篇《Qt之 读取 /dev/input/event*设备 并解析》，不过这篇是触摸屏输入
+
+ddz
+https://gitee.com/subingwen/landlords
+
+研究gpicase
+https://sirius10.net/Games/Akane.php
+https://sirius10.net/RaspberryPi/ONScripter.html
+树莓派编译
+https://sirius10.net/Games/Bless.php
+
+dpi24
+https://www.raspberrypi.com/documentation/computers/raspberry-pi.html
+复古旗应该是通过DPI24格式去显示，占用24脚之中的18脚（RGB666），详细见这篇《盘点那些树莓派与显示屏的连接方式》，DPI是Parallel Display Interface的缩写，可能对应panel-dpi这个驱动——简单来说就是跟SPI屏的驱动不一样，详细见文档：www.raspberrypi.com/documentation/computers/raspberry-pi.html
+https://github.com/ian57/pwm-audio-pizero-gpicase
+https://github.com/ian57/dpi-pizero-gpicase
+https://zhuanlan.zhihu.com/p/353402654?utm_id=0
+https://zhuanlan.zhihu.com/p/662096549?utm_id=0
+https://retroflag.com/GPi-CASE.html
+https://support.retroflag.com
+话说树莓派的硬件文档很长，而DPI24这种显示总线怎么看上去那么像RGB并口屏幕（可能一样，少了背光BL，仅保留DE,VSYNC,HSYNC,CLK四个控制脚，文档是PCLK,DE,LCD_VSYNC,LCD_HSYNC）不过可以配置成不同的，例如RGB666，会忽略掉一些脚），从某种意义上可以复刻NES了（逃），至少颜色上是兼容的（逃）
+
+小志掌机研究。这个研究快接近尾声了，至少今年应该不会继续研究，音频输出功能以后再说。关于GamePi20的声音输出，虽然相关的资料很少，但我觉得可能和GamePi15和gpicase是类似的，而这两个有一些资料显示声音输出的原理，所以下一年可能会研究，或者等我了解得比较多有把握再研究声音问题
+qt4-nes_v2_rpi_final_success.tar.gz
+raspberrypi_tools-master.zip
+2018-04-18-raspbian-stretch-lite.zip
+
+还差上传树莓派zero的qt4源码修改版
+qt-everywhere-opensource-src-4.8.6_gamepi20_v1.tar.gz
+```
+
 ## Gaviar-Handheld, 小志掌機, 小志掌机 (xiaozhi), Allwinner D1s    
 * https://bbs.aw-ol.com/topic/3751/全开源-小志掌機gaviar-handheld-资料汇总/9  
 run rom :
